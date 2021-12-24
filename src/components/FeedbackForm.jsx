@@ -53,10 +53,11 @@ function FeedbackForm() {
       setText("");
     }
   };
+
   return (
     <Card>
       <form onSubmit={handleSubmit}>
-        <h2>how would you rate your service with us?</h2>
+        <h2>How would you rate your service with us?</h2>
         <RatingSelect select={(rating) => setRating(rating)} />
         <div className="input-group">
           <input
@@ -69,7 +70,8 @@ function FeedbackForm() {
             Send
           </Button>
         </div>
-        { message && <div className="message">{ message }</div>}
+
+        {message && <div className="message">{message}</div>}
       </form>
     </Card>
   );
